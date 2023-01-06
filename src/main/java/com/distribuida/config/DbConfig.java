@@ -17,9 +17,9 @@ public class DbConfig {
         Config config = ConfigProvider.getConfig();
         if (pool == null) {
             pool = new BasicDataSource();
-            pool.setUrl(config.getValue("db.url", String.class));
             pool.setUsername(config.getValue("db.user", String.class));
             pool.setPassword(config.getValue("db.password", String.class));
+            pool.setUrl(config.getValue("db.url", String.class));
 
         }
         return pool;

@@ -27,6 +27,14 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public List<Books> findAll() {
+        List<Books> books = getJdbi().withExtension(BookDao.class, dao -> {
+            return dao.findAll();
+        });
+        return books;
+    }
+
+    @Override
     public void updateBook(Books book) {
         getJdbi().useExtension(BookDao.class, dao -> {
             dao.updateBook(book);
@@ -46,14 +54,6 @@ public class BookServiceImpl implements BookService {
             return dao.findById(id);
         });
         return book;
-    }
-
-    @Override
-    public List<Books> findAll() {
-        List<Books> books = getJdbi().withExtension(BookDao.class, dao -> {
-            return dao.findAll();
-        });
-        return books;
     }
 
 }

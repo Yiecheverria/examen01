@@ -12,7 +12,6 @@ import java.util.List;
 @ApplicationScoped
 @Path("/books")
 public class BookRest {
-
     @Inject
     private BookService bookService;
 
@@ -46,6 +45,7 @@ public class BookRest {
     @Produces(MediaType.APPLICATION_JSON)
     public void deleteBook(@PathParam("id") Integer id) {
         bookService.deleteBook(id);
+
     }
 
     @GET
