@@ -1,7 +1,7 @@
 package com.distribuida.dao;
 
 import com.distribuida.db.Books;
-import com.distribuida.db.mapping.BookMapper;
+import com.distribuida.db.jdbi.BookMapper;
 import org.jdbi.v3.sqlobject.config.RegisterRowMapper;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.customizer.BindBean;

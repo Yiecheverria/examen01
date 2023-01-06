@@ -1,4 +1,4 @@
-package com.distribuida.db.mapping;
+package com.distribuida.db.jdbi;
 
 import com.distribuida.db.Books;
 import org.jdbi.v3.core.mapper.RowMapper;
